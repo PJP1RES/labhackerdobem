@@ -17,29 +17,21 @@ def drawStar(starSize, starColour):
     end_fill()
     penup()
 
-def drawGalaxy(numberOfStars):
-    colors = ["Blue", "White", "Yellow"]
-    moveToRandomLocation()
-
-    for star in range(numberOfStars):
-        penup()
-        left(randint(-180,180))
-        forward(randint(5,20))
-        pendown()
-        drawStar(2, choice(colors))
-
-    
-speed(11)
-
 bgcolor("MidnightBlue")
-colors = ["Blue", "White", "Yellow"]
+
 for star in range(30):
     moveToRandomLocation()
-    drawStar(randint(5,25), choice(colors))
+    drawStar(randint(5,25), "White")
 
-for galaxy in range(3):
-    drawGalaxy(40)
+#use a função para desenhar estrelas!
+#drawStar(50, "Blue")
+#forward(100)
 
+#drawStar(30, "Yellow")
+#left(120)
+#forward(150)
+
+#drawStar(70, "Green")
 
 hideturtle()
 done()
